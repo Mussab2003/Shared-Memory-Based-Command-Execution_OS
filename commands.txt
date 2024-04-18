@@ -1,131 +1,100 @@
-ls`
-cd`
-pwd`
-mkdir`
-rmdir`
-`touch`
-`cp`
-`mv`
-`rm`
-`cat`
-`more`
-`less`
-`head`
-`tail`
-`grep`
-`find`
-`wc`
-`chmod`
-`chown`
-`ln`
-`locate`
-`which`
-`whereis`
-`du`
-`df`
-`mount`
-`umount`
-`tar`
-`gzip`
-`gunzip`
-`zip`
-`unzip`
-`ssh`
-`scp`
-`wget`
-`curl`
-`ping`
-`traceroute`
-`ifconfig`
-`iwconfig`
-`netstat`
-`nmap`
-`iptables`
-`hostname`
-`uname`
-`whoami`
-`uptime`
-`date`
-`cal`
-`clear`
-`echo`
-`exit`
-`history`
-`man`
-`info`
-`apropos`
-`alias`
-`export`
-`source`
-`jobs`
-`fg`
-`bg`
-`kill`
-`ps`
-`top`
-`killall`
-`nice`
-`renice`
-`at`
-`cron`
-`crontab`
-`shutdown`
-`reboot`
-`halt`
-`poweroff`
-`chmod`
-`chown`
-`chgrp`
-`umask`
-`passwd`
-`useradd`
-`userdel`
-`usermod`
-`groupadd`
-`groupdel`
-`groupmod`
-`visudo`
-`sudo`
-`su`
-`adduser`
-`addgroup`
-`deluser`
-`delgroup`
-`vigr`
-`vipw`
-`passwd`
-`who`
-`w`
-`last`
-`lastlog`
-`dmesg`
-`uname`
-`lsmod`
-`modprobe`
-`insmod`
-`rmmod`
-`lsblk`
-`fdisk`
-`mkfs`
-`fsck`
-`mount`
-`umount`
-`blkid`
-`parted`
-`lspci`
-`lsusb`
-`free`
-`top`
-`htop`
-`ps`
-`kill`
-`killall`
-`shutdown`
-`reboot`
-`halt`
-`poweroff`
-`df`
-`du`
-`mount`
-`umount`
-`tar`
+ls folder_name
+pwd
+cd folder_name
+mkdir new_folder_name
+rmdir folder_name
+touch file_name
+cat file_name
+grep pattern file_name
+mv old_file_name new_file_name
+cp file_name new_file_name
+rm file_name
+nano file_name
+vi file_name
+df
+du folder_name
+free
+ps
+top
+kill process_id
+chmod permissions file_name
+chown user_name file_name
+tar  -tvf archive.tar
+gzip  -l file_name.gz
+unzip  -l archive.zip
+head  -n number_of_lines file_name
+tail  -n number_of_lines file_name
+find folder_name
+ping website_address
+traceroute website_address
+ifconfig
+ip address show
+scp file_name user@host:directory
+ssh user@host
+mount
+umount device_name
+sort file_name
+uniq file_name
+wc file_name
+diff file1 file2
+date
+uptime
+who
+history
+uname  -a
+useradd username
+userdel username
+groupadd groupname
+groupdel groupname
+passwd username
+sudo command
+locate filename
+wget URL
+curl URL
+rsync  av source destination
+hostname
+service   status all
+systemctl list units   type=service
+journalctl  -u service_name
+ln  -s target_file link_name
+which command_name
+whereis command_name
+lsof file_name
+netstat
+route
+whoami
+last
+shutdown
+reboot
+alias
+jobs
+bg
+fg
+nohup command
+chroot folder_name
+screen
+crontab  -l
+df  -h
+du  -sh folder_name
+gzip file_name
+gunzip file_name.gz
+zip  -r archive_name.zip folder_name
+unzip archive_name.zip
+watch command
+time command
+nice command
+renice priority process_id
+touch file_name
+awk pattern file_name
+sed 's/search/replace/' file_name
+paste file1 file2
+cut  d delimiter  f field_number file_name
+tee file_name
+xargs command
+cmp file1 file2
+comm file1 file2
+diff file1 file2
+patch  p1 < patch_file
+shred  -u file_name
+ls -la newFolder
+ps -a
