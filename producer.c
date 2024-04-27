@@ -10,14 +10,15 @@
 
 
 #define num_threads 4
-
+#define max_line_size 256
+pthread_mutex_t mutex;
 const int SHM_SIZE = 4096;
 const char *SHM_NAME = "OS";
 
 FILE *fptr;
-char buffer[5000];
 int shm_fd;
 char *ptr;
+int lines = 0;
 
 void openFile()
 {
@@ -35,19 +36,34 @@ void openSHM()
     ptr = (char *)mmap(0, SHM_SIZE, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
 }
 
+void NoOfLinesCalculator()
+{   
+    int ch;
+    while(EOF != (ch = getc(fptr)))
+    {
+        if(ch == '\n')
+            lines++;
+    }
+    fseek(fptr, 0, SEEK_SET);
+}
+
 void *readFromFile(void *args)
 {
+    printf("%d", lines);
     int thread_id = *((int *) args);
-    int start = thread_id * (100 / num_threads);
-    int end = start + (100 / num_threads);
+    int start = thread_id * (lines / num_threads);
+    int end = start + (lines / num_threads);
 
+    char line[max_line_size];
+
+    pthread_mutex_lock(&mutex);
     for(int i=start; i<end; i++)
     {
-        fgets(buffer, sizeof(buffer), fptr);
-        printf("%s", buffer);
-        sprintf(ptr, "%s\n", buffer);
-        ptr += strlen(buffer);
+        fgets(line, max_line_size, fptr);
+        sprintf(ptr, "%s\n", line);
+        ptr += strlen(line);
     }
+    pthread_mutex_unlock(&mutex);
 
 }
 
@@ -55,9 +71,10 @@ int main()
 {
     openFile();
     openSHM();
-    
+    NoOfLinesCalculator();
     pthread_t threads[num_threads];
     int thread_args[num_threads];
+    pthread_mutex_init(&mutex, NULL);
 
     for(int i=0; i<num_threads; i++)
     {
@@ -73,5 +90,6 @@ int main()
     close(shm_fd);
     fclose(fptr);
 
+    pthread_mutex_destroy(&mutex);
     return 0;
 }
