@@ -12,13 +12,14 @@
 #define num_threads 4
 #define max_line_size 256
 pthread_mutex_t mutex;
-const int SHM_SIZE = 4096;
+const int SHM_SIZE = 10000;
 const char *SHM_NAME = "OS";
 
 FILE *fptr;
 int shm_fd;
 char *ptr;
 int lines = 0;
+int j=0;
 
 void openFile()
 {
@@ -59,7 +60,9 @@ void *readFromFile(void *args)
     pthread_mutex_lock(&mutex);
     for(int i=start; i<end; i++)
     {
+        j++;
         fgets(line, max_line_size, fptr);
+        printf("thread %d : %d: %s", thread_id, j, line);
         sprintf(ptr, "%s\n", line);
         ptr += strlen(line);
     }

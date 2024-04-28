@@ -1,100 +1,300 @@
-ls folder_name
+mkdir sample
+cd sample
+touch file.txt
+touch output.txt
+echo "Hello World" >> output.txt >> file.txt
+ls -l >> output.txt
+pwd >> output.txt
+echo "This is a dummy file containing dummy content" >> file.txt
+cat file.txt >> output.txt
+grep "dummy" file.txt >> output.txt
+find / -name file.txt >> output.txt
+ps >> output.txt
+netstat >> output.txt
+echo "This is a new command" >> output.txt
+date >> output.txt
+df >> output.txt
+du >> output.txt
+ls -l >> output.txt
+cat -n file.txt >> output.txt
+touch newFile >> output.txt
+less file.txt >> output.txt
+head file.txt >> output.txt
+awk 1 file.txt >> output.txt
+wc file.txt >> output.txt
+nano file.txt
+ls -la >> output.txt
+who >> output.txt
+uname -a >> output.txt
+df -h >> output.txt
+du -sh * >> output.txt
+free -h >> output.txt
+top >> output.txt
+ps aux >> output.txt
+history >> output.txt
+man ls >> output.txt
+uptime >> output.txt
+hostname >> output.txt
+env >> output.txt
+lsof >> output.txt
+netstat -a >> output.txt
+touch newfile2.txt
+echo "This is dummy message" >> output.txt >> newfile.txt
+ls -r >> output.txt
+cat -T file.txt >> output.txt
+grep "Hello" file.txt >> output.txt
+ps -ejH >> output.txt
+man mkdir >> output.txt
+awk '{print $1}' file.txt >> output.txt
+gedit newfile.txt
+touch newfile3.txt
+ls -lh >> output.txt
+ps -ef >> output.txt
+netstat -n >> output.txt
+echo "This is another command" >> output.txt
+date +%Y%m%d >> output.txt
+df -k >> output.txt
+du -c >> output.txt
+sort file.txt >> output.txt
+wc output.txt >> output.txt
+touch file1.txt
+echo "This is a random msg" >> output.txt >> file1.txt >> newfile.txt
+head newfile.txt
+tail file.txt >> output.txt
+grep -i "world" file.txt >> output.txt
+ifconfig >> output.txt
+ip addr show >> output.txt
+route -n >> output.txt
+systemctl status >> output.txt
+grep -v "^$" output.txt
+whoami >> output.txt
+ls -a >> output.txt
+cat /etc/passwd >> output.txt
+echo $PATH >> output.txt
+date +%Y-%m-%d >> output.txt
+ls -R >> output.txt
+touch logfile.txt
+echo "This is a dummy error file with dummy content in it" >> logfile.txt
+grep "error" logfile.txt >> output.txt
+find . -type f -name "*.txt" >> output.txt
+du -h >> output.txt
+ps -ef | grep "process" >> output.txt
+tail -n 10 logfile.txt >> output.txt
+wc -l file.txt >> output.txt
+ls -lt >> output.txt
+man cp >> output.txt
+echo "This is a new variation of the command" >> output.txt
+ls -a >> output.txt
+cat /etc/hosts >> output.txt
+echo $HOME >> output.txt
+date +%H:%M:%S >> output.txt
+ls -R /home >> output.txt
+touch log.txt
+echo "This is a log message" >> log.txt
+grep "message" log.txt >> output.txt
+find . -type d -name "sample" >> output.txt
+du -sh . >> output.txt
+ps -ef | grep "command" >> output.txt
+tail -n 5 log.txt >> output.txt
+wc -w file.txt >> output.txt
+ls -lrt >> output.txt
+man mv >> output.txt
+man rmdir | grep "directory" >> output.txt
+ls -l >> output.txt
+pwd >> output.txt
+echo "This is a dummy file containing dummy content" >> file.txt
+cat file.txt >> output.txt
+grep "dummy" file.txt >> output.txt
+find / -name file.txt >> output.txt
+ps >> output.txt
+netstat >> output.txt
+echo "dummy file" >> output.txt
+date >> output.txt
+df >> output.txt
+du >> output.txt
+ls -l >> output.txt
+cat -n file.txt >> output.txt
+touch newFile >> output.txt
+less file.txt >> output.txt
+head file.txt >> output.txt
+awk 1 file.txt >> output.txt
+wc file.txt >> output.txt
+nano file.txt
+lscpu >> output.txt
+free -h >> output.txt
+df -h >> output.txt
+hdparm -I /dev/sda >> output.txt
+lspci >> output.txt
+lsusb >> output.txt
+uname -a >> output.txt
+top >> output.txt
+vmstat >> output.txt
+iostat >> output.txt
+htop >> output.txt
+lshw >> output.txt
+netstat -i >> output.txt
+find / -size +100M
+man cd >> output.txt
+ls -la
 pwd
-cd folder_name
-mkdir new_folder_name
-rmdir folder_name
-touch file_name
-cat file_name
-grep pattern file_name
-mv old_file_name new_file_name
-cp file_name new_file_name
-rm file_name
-nano file_name
-vi file_name
-df
-du folder_name
-free
-ps
-top
-kill process_id
-chmod permissions file_name
-chown user_name file_name
-tar  -tvf archive.tar
-gzip  -l file_name.gz
-unzip  -l archive.zip
-head  -n number_of_lines file_name
-tail  -n number_of_lines file_name
-find folder_name
-ping website_address
-traceroute website_address
-ifconfig
-ip address show
-scp file_name user@host:directory
-ssh user@host
-mount
-umount device_name
-sort file_name
-uniq file_name
-wc file_name
-diff file1 file2
-date
-uptime
-who
-history
-uname  -a
-useradd username
-userdel username
-groupadd groupname
-groupdel groupname
-passwd username
-sudo command
-locate filename
-wget URL
-curl URL
-rsync  av source destination
-hostname
-service   status all
-systemctl list units   type=service
-journalctl  -u service_name
-ln  -s target_file link_name
-which command_name
-whereis command_name
-lsof file_name
-netstat
-route
-whoami
-last
-shutdown
-reboot
-alias
-jobs
-bg
-fg
-nohup command
-chroot folder_name
-screen
-crontab  -l
-df  -h
-du  -sh folder_name
-gzip file_name
-gunzip file_name.gz
-zip  -r archive_name.zip folder_name
-unzip archive_name.zip
-watch command
-time command
-nice command
-renice priority process_id
-touch file_name
-awk pattern file_name
-sed 's/search/replace/' file_name
-paste file1 file2
-cut  d delimiter  f field_number file_name
-tee file_name
-xargs command
-cmp file1 file2
-comm file1 file2
-diff file1 file2
-patch  p1 < patch_file
-shred  -u file_name
-ls -la newFolder
-ps -a
+ls -l /etc >> output.txt
+cat /etc/passwd >> output.txt
+grep "error" /var/log/syslog >> output.txt
+find / -type f -name "*.log" >> output.txt
+tail -n 10 /var/log/messages >> output.txt
+wc -l /var/log/auth.log >> output.txt
+man grep >> output.txt
+lsblk >> output.txt
+df -h >> output.txt
+du -sh /home >> output.txt
+ls -l /var/www >> output.txt
+cat /var/log/apache2/access.log >> output.txt
+grep "warning" /var/log/nginx/error.log >> output.txt
+find /var/log -type f -name "*.log" >> output.txt
+tail -n 5 /var/log/syslog >> output.txt
+wc -w /var/log/messages >> output.txt
+man tail >> output.txt
+ls -l /usr/bin >> output.txt
+cat /etc/hosts >> output.txt
+grep "root" /etc/passwd >> output.txt
+find /usr -type f -name "*.txt" >> output.txt
+tail -n 10 /var/log/apache2/error.log >> output.txt
+wc -l /etc/hosts >> output.txt
+man find >> output.txt
+ls -l /var/log >> output.txt
+cat /etc/group >> output.txt
+grep "permission denied" /var/log/auth.log >> output.txt
+find /var -type f -name "*.log" >> output.txt
+tail -n 5 /var/log/nginx/access.log >> output.txt
+wc -w /var/log/syslog >> output.txt
+man wc >> output.txt
+ls -l /usr/local/bin >> output.txt
+cat /etc/resolv.conf >> output.txt
+grep "user" /etc/group >> output.txt
+find /usr/local -type f -name "*.txt" >> output.txt
+tail -n 10 /var/log/syslog >> output.txt
+wc -l /etc/resolv.conf >> output.txt
+man tail >> output.txt
+pwd >> output.txt
+ls -la >> output.txt
+mkdir newFolder
+touch newFile10
+gedit newFile10 >> output.txt
+vim file.txt >> output.txt
+cat /etc/group >> output.txt
+grep "permission denied" /var/log/auth.log >> output.txt
+find /var -type f -name "*.log" >> output.txt
+tail -n 5 /var/log/nginx/access.log >> output.txt
+wc -w /var/log/syslog >> output.txt
+man wc >> output.txt
+ls -l /usr/local/bin >> output.txt
+cat /etc/resolv.conf >> output.txt
+grep "user" /etc/group >> output.txt
+find /usr/local -type f -name "*.txt" >> output.txt
+tail -n 10 /var/log/syslog >> output.txt
+wc -l /etc/resolv.conf >> output.txt
+man tail >> output.txt
+pwd >> output.txt
+ls -la >> output.txt
+mkdir newFolder
+touch newFile10
+gedit newFile10 >> output.txt
+vim file.txt >> output.txt
+ls -l /var/log/apache2/error.log >> output.txt
+cat /etc/group >> output.txt
+grep "permission denied" /var/log/auth.log >> output.txt
+find /var -type f -name "*.log" >> output.txt
+tail -n 5 /var/log/nginx/access.log >> output.txt
+wc -w /var/log/syslog >> output.txt
+man wc >> output.txt
+ls -l /usr/local/bin >> output.txt
+cat /etc/resolv.conf >> output.txt
+grep "user" /etc/group >> output.txt
+find /usr/local -type f -name "*.txt" >> output.txt
+tail -n 10 /var/log/syslog >> output.txt
+wc -l /etc/resolv.conf >> output.txt
+man tail >> output.txt
+pwd >> output.txt
+ls -la >> output.txt
+mkdir newFolder
+touch newFile10
+gedit newFile10 >> output.txt
+vim file.txt >> output.txt
+ls -l /var/log/apache2/error.log >> output.txt
+cat /etc/group >> output.txt
+grep "permission denied" /var/log/auth.log >> output.txt
+find /var -type f -name "*.log" >> output.txt
+tail -n 5 /var/log/nginx/access.log >> output.txt
+wc -w /var/log/syslog >> output.txt
+man wc >> output.txt
+ls -l /usr/local/bin >> output.txt
+cat /etc/resolv.conf >> output.txt
+grep "user" /etc/group >> output.txt
+find /usr/local -type f -name "*.txt" >> output.txt
+tail -n 10 /var/log/syslog >> output.txt
+wc -l /etc/resolv.conf >> output.txt
+man tail >> output.txt
+pwd >> output.txt
+ls -la >> output.txt
+mkdir newFolder
+touch newFile10
+gedit newFile10 >> output.txt
+vim file.txt >> output.txt
+ls -l /var/log/apache2/error.log >> output.txt
+cat /etc/group >> output.txt
+grep "permission denied" /var/log/auth.log >> output.txt
+find /var -type f -name "*.log" >> output.txt
+tail -n 5 /var/log/nginx/access.log >> output.txt
+wc -w /var/log/syslog >> output.txt
+man wc >> output.txt
+ls -l /usr/local/bin >> output.txt
+cat /etc/resolv.conf >> output.txt
+grep "user" /etc/group >> output.txt
+find /usr/local -type f -name "*.txt" >> output.txt
+tail -n 10 /var/log/syslog >> output.txt
+wc -l /etc/resolv.conf >> output.txt
+man tail >> output.txt
+pwd >> output.txt
+ls -la >> output.txt
+mkdir newFolder12
+touch newFile23
+gedit newFile10 >> output.txt
+vim file.txt >> output.txt
+ls -l /var/log/apache2/error.log >> output.txt
+cat /etc/group >> output.txt
+grep "permission denied" /var/log/auth.log >> output.txt
+find /var -type f -name "*.log" >> output.txt
+tail -n 5 /var/log/nginx/access.log >> output.txt
+wc -w /var/log/syslog >> output.txt
+man wc >> output.txt
+ls -l /usr/local/bin >> output.txt
+cat /etc/resolv.conf >> output.txt
+grep "user" /etc/group >> output.txt
+find /usr/local -type f -name "*.txt" >> output.txt
+tail -n 10 /var/log/syslog >> output.txt
+wc -l /etc/resolv.conf >> output.txt
+man tail >> output.txt
+pwd >> output.txt
+ls -la >> output.txt
+mkdir newFolder
+touch newFile10
+gedit newFile10 >> output.txt
+vim file.txt >> output.txt
+ps -a >> output.txt
+lscpu >> output.txt
+ls -la >> output.txt
+netstat -r >> output.txt
+grep -i "output" output.txt >> output.txt
+ls - a >> output.txt
+env >> output.txt
+hostname >> output.txt
+man man >> output.txt
+dmesg >> output.txt
+lsof >> output.txt
+history >> output.txt
+date >> output.txt
+who >> output.txt
+echo "adfalsfljfadlsjafj" >> output.txt
+cat file.txt
+touch file11.txt
+pwd

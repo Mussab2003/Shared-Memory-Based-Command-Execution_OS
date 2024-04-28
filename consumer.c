@@ -7,7 +7,7 @@
 int main()
 {
 /* the size (in bytes) of shared memory object */
-const int SIZE = 4096;
+const int SIZE = 10000;
 /* name of the shared memory object */
 const char *name = "OS";
 /* shared memory file descriptor */
